@@ -26,8 +26,9 @@ public class Player : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    protected virtual void Update()
     {
+              
         var moveAction = InputSystem.actions.FindAction("Move");
         var hInput = moveAction.ReadValue<Vector2>().x;
         transform.Translate(hInput * Speed * Time.deltaTime * Vector3.right);
@@ -45,6 +46,7 @@ public class Player : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground"))
         {
             isOnGround = true;
+            Debug.Log(this.gameObject.name + "On ground");
         }
     }
 }
