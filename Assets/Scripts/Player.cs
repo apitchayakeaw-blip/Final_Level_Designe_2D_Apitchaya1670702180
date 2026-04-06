@@ -6,6 +6,8 @@ public class Player : MonoBehaviour
     public Rigidbody2D rb;
     public float gravityMultiplier = 20f;
 
+    
+
     public float Speed = 10;
 
     private InputAction jumpAction;
@@ -29,6 +31,8 @@ public class Player : MonoBehaviour
     protected virtual void Update()
     {
               
+       
+        
         var moveAction = InputSystem.actions.FindAction("Move");
         var hInput = moveAction.ReadValue<Vector2>().x;
         transform.Translate(hInput * Speed * Time.deltaTime * Vector3.right);
