@@ -11,7 +11,6 @@ public class Enemy : MonoBehaviour
             Player p = collision.gameObject.GetComponent<Player>();
 
             if(p != null)
-
             {
                 p.TakeDamage(damage);
             }
@@ -25,7 +24,6 @@ public class Enemy : MonoBehaviour
             
         }
     }
-
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
