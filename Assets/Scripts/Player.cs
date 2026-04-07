@@ -6,7 +6,8 @@ public class Player : MonoBehaviour
     public Rigidbody2D rb;
     public float gravityMultiplier = 20f;
 
-    
+    public int maxHealth;
+    public int health;
 
     public float Speed = 10;
 
@@ -25,14 +26,14 @@ public class Player : MonoBehaviour
     void Start()
     {
        Physics2D.gravity *= gravityMultiplier;
+       maxHealth = 1;
+       health = maxHealth;
     }
 
     // Update is called once per frame
     protected virtual void Update()
     {
-              
-       
-        
+                   
         var moveAction = InputSystem.actions.FindAction("Move");
         var hInput = moveAction.ReadValue<Vector2>().x;
         transform.Translate(hInput * Speed * Time.deltaTime * Vector3.right);
@@ -51,6 +52,15 @@ public class Player : MonoBehaviour
         {
             isOnGround = true;
             Debug.Log(this.gameObject.name + "On ground");
+        }
+    }
+
+    public void TakeDamage(int damage)
+    {
+        health -= damage;
+        if (health <= 0)
+        {
+            Destroy(gameObject);
         }
     }
 }
