@@ -20,6 +20,7 @@ public class Enemy : MonoBehaviour
             if(pm != null)
             {
                 pm.TakeDamage(damage);
+                Debug.Log(damage);
             }
             
         }

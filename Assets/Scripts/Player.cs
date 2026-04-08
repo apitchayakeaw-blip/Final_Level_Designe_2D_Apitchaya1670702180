@@ -6,10 +6,13 @@ public class Player : MonoBehaviour
     public Rigidbody2D rb;
     public float gravityMultiplier;
 
+    // Camera Fllow
     public Transform cam;
     public Vector3 offset;
-    
 
+    //Respawn Player
+    public Vector3 respawnPoint;
+    
     public int maxHealth;
     public int health;
 
@@ -66,14 +69,35 @@ public class Player : MonoBehaviour
             Debug.Log(this.gameObject.name + "On ground");
         }
     }
-
     public void TakeDamage(int damage)
     {
         health -= damage;
         if (health <= 0)
+        {       
+            //gameOverScreen.Setup();
+            RespawnAllPlayer();
+        }
+    }
+
+    private void RespawnAllPlayer() // Make All player go same checkpoint
+    {
+        Player[] players = FindObjectsByType<Player>(FindObjectsSortMode.None);
+        foreach (Player p in players)
         {
-            Destroy(gameObject);
-            gameOverScreen.Setup();
+            p.health = p.maxHealth;
+            p.RespawnNow();
+        }
+    }
+
+    public void RespawnNow()
+    {
+        if (CheckPoint.hasCheckPoint) // hit checkpoint
+        {
+            transform.position = CheckPoint.lastChekpoint;
+        }
+        else // didn't hit any checkpoit yet
+        {
+            transform.position = respawnPoint;
         }
     }
 }
