@@ -1,10 +1,13 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Windows;
 
 public class Player : MonoBehaviour
 {
     public Rigidbody2D rb;
     public float gravityMultiplier;
+
+    bool facingRight = true;
 
     // Camera Fllow
     public Transform cam;
@@ -12,7 +15,7 @@ public class Player : MonoBehaviour
 
     //Respawn Player
     public Vector3 respawnPoint;
-    
+
     public int maxHealth;
     public int health;
 
@@ -28,6 +31,7 @@ public class Player : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         jumpAction = InputSystem.actions.FindAction("Jump");
+
 
         Physics2D.gravity = new Vector2(0, -9.81f);
 
@@ -48,10 +52,21 @@ public class Player : MonoBehaviour
     {
         Vector3 targetPosition = transform.position + offset;
         cam.position = Vector3.Lerp(cam.position, targetPosition, Speed * Time.deltaTime);
-        
+    
         var moveAction = InputSystem.actions.FindAction("Move");
-        var hInput = moveAction.ReadValue<Vector2>().x;
-        transform.Translate(hInput * Speed * Time.deltaTime * Vector3.right);
+        var  input = moveAction.ReadValue<Vector2>();
+       transform.Translate(new Vector3(input.x, 0, 0) * Speed * Time.deltaTime);
+
+        if (input.x > 0 && !facingRight)
+        {
+          Flip();
+        }
+           
+        else if (input.x < 0 && facingRight)
+        {
+            Flip();
+        }
+           
 
         if (jumpAction.triggered && isOnGround == true)
         {
@@ -60,13 +75,23 @@ public class Player : MonoBehaviour
         }
     }
 
+    void Flip()
+    {
+        facingRight = !facingRight;
+        Vector3 theScale = transform.localScale;
+        theScale.x *= -1;
+        transform.localScale = theScale;
+    }
+
+
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         
         if (collision.gameObject.CompareTag("Ground"))
         {
             isOnGround = true;
-            Debug.Log(this.gameObject.name + "On ground");
+            
         }
     }
     public void TakeDamage(int damage)

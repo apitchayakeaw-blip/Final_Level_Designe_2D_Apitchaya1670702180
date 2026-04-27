@@ -3,6 +3,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     public int damage;
+    public int health;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -23,6 +24,15 @@ public class Enemy : MonoBehaviour
                 Debug.Log(damage);
             }
             
+        }
+    }
+
+    public void TakeDamage(int damage)
+    {
+        health -= damage;
+        if (health <= 0)
+        {
+           Destroy(gameObject);
         }
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
