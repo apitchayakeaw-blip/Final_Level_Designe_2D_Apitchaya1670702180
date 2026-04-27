@@ -9,6 +9,8 @@ public class Player : MonoBehaviour
 
     bool facingRight = true;
 
+    public Animator animator;
+
     // Camera Fllow
     public Transform cam;
     public Vector3 offset;
@@ -48,14 +50,62 @@ public class Player : MonoBehaviour
     }
 
     // Update is called once per frame
-    protected virtual void Update()
+
+    protected virtual void FixedUpdate()
     {
         Vector3 targetPosition = transform.position + offset;
         cam.position = Vector3.Lerp(cam.position, targetPosition, Speed * Time.deltaTime);
-    
+
         var moveAction = InputSystem.actions.FindAction("Move");
+        var input = moveAction.ReadValue<Vector2>();
+        rb.linearVelocity = new Vector2(input.x * Speed, rb.velocity.y);
+        //transform.Translate(new Vector3(input.x, 0, 0) * Speed * Time.deltaTime);
+
+        if (input.x > 0 && !facingRight)
+        {
+            Flip();
+        }
+
+        else if (input.x < 0 && facingRight)
+        {
+            Flip();
+        }
+
+        if (input.x != 0)
+        {
+            animator.SetBool("isWalking", true);
+        }
+        else
+        {
+            animator.SetBool("isWalking", false);
+        }
+
+        if (rb.linearVelocity.y > 0.1f)
+        {
+            animator.SetBool("isJumping", true);
+            animator.SetBool("isFalling", false);
+        }
+        else if (rb.linearVelocity.y < -0.1f)
+        {
+            animator.SetBool("isJumping", false);
+            animator.SetBool("isFalling", true);
+        }
+        else
+        {
+            animator.SetBool("isJumping", false);
+            animator.SetBool("isFalling", false);
+        }
+
+
+    }
+    protected virtual void Update()
+    {
+        //Vector3 targetPosition = transform.position + offset;
+        //cam.position = Vector3.Lerp(cam.position, targetPosition, Speed * Time.deltaTime);
+    
+        /*var moveAction = InputSystem.actions.FindAction("Move");
         var  input = moveAction.ReadValue<Vector2>();
-       transform.Translate(new Vector3(input.x, 0, 0) * Speed * Time.deltaTime);
+        transform.Translate(new Vector3(input.x, 0, 0) * Speed * Time.deltaTime);
 
         if (input.x > 0 && !facingRight)
         {
@@ -66,6 +116,15 @@ public class Player : MonoBehaviour
         {
             Flip();
         }
+
+        if(input.x != 0)
+        {
+            animator.SetBool("isWalking" , true);
+        }
+        else
+        {
+            animator.SetBool("isWalking", false);
+        }*/
            
 
         if (jumpAction.triggered && isOnGround == true)
@@ -73,6 +132,8 @@ public class Player : MonoBehaviour
             rb.AddForce(JumpForce * Vector2.up , ForceMode2D.Impulse);
             isOnGround = false;
         }
+
+
     }
 
     void Flip()

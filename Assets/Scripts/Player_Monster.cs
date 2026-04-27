@@ -22,6 +22,7 @@ public class Player_Monster : Player
     protected override void Update()
     {
        
+        base.FixedUpdate();
         base.Update();
 
         CheckMaleeTimer();
