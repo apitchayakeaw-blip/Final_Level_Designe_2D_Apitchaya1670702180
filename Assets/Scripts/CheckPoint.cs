@@ -6,6 +6,8 @@ public class CheckPoint : MonoBehaviour
     
     public static Vector3 lastChekpoint; // make both player have same checkpoint
     public static bool hasCheckPoint;
+    public GameObject Save;
+    public GameObject UnSave;
 
     void Start()
     {
@@ -18,6 +20,9 @@ public class CheckPoint : MonoBehaviour
         {         
             lastChekpoint = transform.position;
             hasCheckPoint = true;
+
+            Save.SetActive(true);
+            UnSave.SetActive(false);
         }
     }
 

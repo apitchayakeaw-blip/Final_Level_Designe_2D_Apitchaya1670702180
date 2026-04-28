@@ -18,20 +18,28 @@ public class Player_Monster : Player
         health = maxHealth;
     }
 
+    protected override void FixedUpdate()
+    {
+        base.FixedUpdate();
+    }    
+
+
     // Update is called once per frame
     protected override void Update()
-    {
-       
-        base.FixedUpdate();
+    {      
         base.Update();
 
         CheckMaleeTimer();
 
-        if (Input.GetMouseButton(0))
+        if (Input.GetButtonDown("Fire1"))
         {
             OnAttack();
+           
+            
         }
-       
+
+        
+
     }
 
     void OnAttack()
@@ -39,7 +47,10 @@ public class Player_Monster : Player
         if(!IsAttack)
         {
             Malee.SetActive(true);
+            atktimer = 0f;
             IsAttack = true;
+            //animator.SetBool("isAttack", IsAttack);
+            animator.SetTrigger("attack");
         }
     }
 
@@ -53,6 +64,9 @@ public class Player_Monster : Player
                 atktimer = 0;  
                 IsAttack = false;
                 Malee.SetActive (false);
+
+                //animator.SetBool("isAttack", false); 
+                
             }
         }
     }

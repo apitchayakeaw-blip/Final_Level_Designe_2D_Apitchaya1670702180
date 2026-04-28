@@ -1,0 +1,509 @@
+fileFormatVersion: 2
+guid: 1a40be241a17154439b65edbd26fca26
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4090536595675180888
+    second: Marun_Sister (1)_0
+  - first:
+      213: 2622457914707269408
+    second: Marun_Sister (1)_1
+  - first:
+      213: 5409470399685398037
+    second: Marun_Sister (1)_2
+  - first:
+      213: 191956539189004605
+    second: Marun_Sister (1)_3
+  - first:
+      213: 6738430517735599504
+    second: Marun_Sister (1)_4
+  - first:
+      213: -5029845033988868898
+    second: Marun_Sister (1)_5
+  - first:
+      213: 632411043633495965
+    second: Marun_Sister (1)_6
+  - first:
+      213: 2627929104094290759
+    second: Marun_Sister (1)_7
+  - first:
+      213: -6396863055284403279
+    second: Marun_Sister (1)_8
+  - first:
+      213: -4695360999386957146
+    second: Marun_Sister (1)_9
+  - first:
+      213: 465397000019091119
+    second: Marun_Sister (1)_10
+  - first:
+      213: -2934454087391992580
+    second: Marun_Sister (1)_11
+  - first:
+      213: -3444606219706514320
+    second: Marun_Sister (1)_12
+  - first:
+      213: -4403589371382575960
+    second: Marun_Sister (1)_13
+  - first:
+      213: 645384794920612482
+    second: Marun_Sister (1)_14
+  - first:
+      213: -8137798765722338184
+    second: Marun_Sister (1)_15
+  - first:
+      213: 3303084583585356100
+    second: Marun_Sister (1)_16
+  - first:
+      213: -2992602150248215343
+    second: Marun_Sister (1)_17
+  - first:
+      213: 2094428207383632843
+    second: Marun_Sister (1)_18
+  - first:
+      213: -2785782602349375965
+    second: Marun_Sister (1)_19
+  - first:
+      213: -7089502750128240602
+    second: Marun_Sister (1)_20
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 64
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Marun_Sister (1)_0
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 387
+        width: 72
+        height: 117
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a09b0a83ae7b37c0800000000000000
+      internalID: -4090536595675180888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marun_Sister (1)_1
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 388
+        width: 72
+        height: 116
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 027d98c3497d46420800000000000000
+      internalID: 2622457914707269408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marun_Sister (1)_2
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 388
+        width: 72
+        height: 117
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51e0d3cfaac421b40800000000000000
+      internalID: 5409470399685398037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marun_Sister (1)_4
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 388
+        width: 72
+        height: 118
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09d2849aad6b38d50800000000000000
+      internalID: 6738430517735599504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marun_Sister (1)_5
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 261
+        width: 73
+        height: 117
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed4b4d14796623ab0800000000000000
+      internalID: -5029845033988868898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marun_Sister (1)_7
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 261
+        width: 75
+        height: 115
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7436378c897487420800000000000000
+      internalID: 2627929104094290759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marun_Sister (1)_9
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 262
+        width: 75
+        height: 117
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6aa31535c0ab6deb0800000000000000
+      internalID: -4695360999386957146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marun_Sister (1)_10
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 262
+        width: 73
+        height: 118
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fae9ba11b1c657600800000000000000
+      internalID: 465397000019091119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marun_Sister (1)_12
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 128
+        width: 89
+        height: 118
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 074ca4bb4ec4230d0800000000000000
+      internalID: -3444606219706514320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marun_Sister (1)_13
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 128
+        width: 88
+        height: 118
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ac4e064cce43e2c0800000000000000
+      internalID: -4403589371382575960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marun_Sister (1)_14
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 128
+        width: 88
+        height: 124
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2827ea43d0ed4f800800000000000000
+      internalID: 645384794920612482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marun_Sister (1)_15
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 128
+        width: 76
+        height: 116
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87cf183732bb01f80800000000000000
+      internalID: -8137798765722338184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marun_Sister (1)_18
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 2
+        width: 73
+        height: 117
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bcbd8ac9b57e01d10800000000000000
+      internalID: 2094428207383632843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marun_Sister (1)_20
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 2
+        width: 72
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62883708fc60d9d90800000000000000
+      internalID: -7089502750128240602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 0f9a32b62ac1c464999ec5eff117949c
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Marun_Sister (1)_0: -4090536595675180888
+      Marun_Sister (1)_1: 2622457914707269408
+      Marun_Sister (1)_10: 465397000019091119
+      Marun_Sister (1)_11: -2934454087391992580
+      Marun_Sister (1)_12: -3444606219706514320
+      Marun_Sister (1)_13: -4403589371382575960
+      Marun_Sister (1)_14: 645384794920612482
+      Marun_Sister (1)_15: -8137798765722338184
+      Marun_Sister (1)_16: 3303084583585356100
+      Marun_Sister (1)_17: -2992602150248215343
+      Marun_Sister (1)_18: 2094428207383632843
+      Marun_Sister (1)_19: -2785782602349375965
+      Marun_Sister (1)_2: 5409470399685398037
+      Marun_Sister (1)_20: -7089502750128240602
+      Marun_Sister (1)_3: 191956539189004605
+      Marun_Sister (1)_4: 6738430517735599504
+      Marun_Sister (1)_5: -5029845033988868898
+      Marun_Sister (1)_6: 632411043633495965
+      Marun_Sister (1)_7: 2627929104094290759
+      Marun_Sister (1)_8: -6396863055284403279
+      Marun_Sister (1)_9: -4695360999386957146
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

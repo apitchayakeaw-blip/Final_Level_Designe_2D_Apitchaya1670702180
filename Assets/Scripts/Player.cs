@@ -58,7 +58,7 @@ public class Player : MonoBehaviour
 
         var moveAction = InputSystem.actions.FindAction("Move");
         var input = moveAction.ReadValue<Vector2>();
-        rb.linearVelocity = new Vector2(input.x * Speed, rb.velocity.y);
+        rb.linearVelocity = new Vector2(input.x * Speed, rb.linearVelocityY);
         //transform.Translate(new Vector3(input.x, 0, 0) * Speed * Time.deltaTime);
 
         if (input.x > 0 && !facingRight)

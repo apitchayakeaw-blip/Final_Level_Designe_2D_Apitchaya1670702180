@@ -18,9 +18,9 @@ public class Switch : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (playerInRange == true && Input.GetKeyDown(KeyCode.E))
+        if (playerInRange == true && Input.GetKeyDown(KeyCode.E))      
         {
-            platforms.TogglePlatform();
+            platforms.TogglePlatform();          
             IsRed = !IsRed;
 
             rend.material.color = IsRed ? Color.red : Color.white;
