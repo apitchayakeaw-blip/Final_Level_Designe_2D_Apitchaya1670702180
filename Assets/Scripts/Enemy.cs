@@ -1,51 +1,60 @@
 using UnityEngine;
+using System.Collections;
 
 public class Enemy : MonoBehaviour
 {
     public int damage;
     public int health;
 
+    Animator animator;
+
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player"))
         {
             Player p = collision.gameObject.GetComponent<Player>();
 
-            if(p != null)
+            if (p != null)
             {
                 p.TakeDamage(damage);
             }
-            
-           Player_Monster pm = collision.gameObject.GetComponent<Player_Monster>();
 
-            if(pm != null)
+            Player_Monster pm = collision.gameObject.GetComponent<Player_Monster>();
+
+            if (pm != null)
             {
                 pm.TakeDamage(damage);
                 Debug.Log(damage);
             }
-            
+
         }
     }
 
     public void TakeDamage(int damage)
     {
+
+
         health -= damage;
+        
         if (health <= 0)
         {
-           Destroy(gameObject);
+            Destroy(gameObject);
         }
     }
+
+
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }
