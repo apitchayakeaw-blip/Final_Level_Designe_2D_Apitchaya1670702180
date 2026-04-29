@@ -6,13 +6,23 @@ public class Switch : MonoBehaviour
     public MovingPlatforms platforms;
     public bool playerInRange = false;
 
-    private Renderer rend;
-    private bool IsRed = false;
-    
+    //private Renderer rend;
+    //private bool IsRed = false;
+
+    public GameObject SwitchOn;
+    public GameObject SwitchOff;
+
+    private bool isOn = true;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        rend = GetComponent<Renderer>();
+        //rend = GetComponent<Renderer>();
+
+        if (SwitchOn != null) SwitchOn.SetActive(true);
+        if (SwitchOff != null) SwitchOff.SetActive(false);
+
+
     }
 
     // Update is called once per frame
@@ -20,11 +30,23 @@ public class Switch : MonoBehaviour
     {
         if (playerInRange == true && Input.GetKeyDown(KeyCode.E))      
         {
-            platforms.TogglePlatform();          
-            IsRed = !IsRed;
 
-            rend.material.color = IsRed ? Color.red : Color.white;
-            
+            isOn = !isOn;
+                
+            SwitchOn.SetActive(isOn);           
+            SwitchOff.SetActive(!isOn);
+
+            if (platforms != null)
+            {
+                platforms.TogglePlatform();
+            }
+
+                 
+            //IsRed = !IsRed;
+
+            //rend.material.color = IsRed ? Color.red : Color.white;
+           
+
         }
     }
 

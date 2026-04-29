@@ -47,6 +47,8 @@ public class Player : MonoBehaviour
         
        maxHealth = 1;
        health = maxHealth;
+
+       
     }
 
     // Update is called once per frame
