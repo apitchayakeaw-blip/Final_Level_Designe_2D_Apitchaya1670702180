@@ -28,6 +28,8 @@ public class Player : MonoBehaviour
     public float JumpForce = 0.5f;
     bool isOnGround;
 
+    public bool DebugColider;
+
     public GameOverScreen gameOverScreen;
 
     private void Awake()
@@ -59,8 +61,8 @@ public class Player : MonoBehaviour
         Vector3 targetPosition = transform.position + offset;
         cam.position = Vector3.Lerp(cam.position, targetPosition, Speed * Time.deltaTime);
 
-        var moveAction = InputSystem.actions.FindAction("Move");
-        var input = moveAction.ReadValue<Vector2>();
+        //var moveAction = InputSystem.actions.FindAction("Move");
+        //var input = moveAction.ReadValue<Vector2>();
         rb.linearVelocity = new Vector2(input.x * Speed, rb.linearVelocityY);
         //transform.Translate(new Vector3(input.x, 0, 0) * Speed * Time.deltaTime);
 
@@ -101,8 +103,14 @@ public class Player : MonoBehaviour
 
 
     }
+
+    Vector2 input = Vector2.zero;
     protected virtual void Update()
     {
+
+        var moveAction = InputSystem.actions.FindAction("Move");
+        input = moveAction.ReadValue<Vector2>();
+        
         //Vector3 targetPosition = transform.position + offset;
         //cam.position = Vector3.Lerp(cam.position, targetPosition, Speed * Time.deltaTime);
     
@@ -151,6 +159,11 @@ public class Player : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        
+       if ( DebugColider)
+        {
+            Debug.Log(collision.gameObject.name);
+        }
         
         if (collision.gameObject.CompareTag("Ground"))
         {
