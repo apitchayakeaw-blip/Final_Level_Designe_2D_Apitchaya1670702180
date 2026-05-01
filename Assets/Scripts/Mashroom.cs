@@ -20,7 +20,7 @@ public class Mashroom : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            Debug.Log("player hit");
+            
 
 
             Player player = collision.gameObject.GetComponent<Player>();

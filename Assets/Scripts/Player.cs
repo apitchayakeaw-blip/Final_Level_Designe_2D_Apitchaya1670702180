@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Windows;
@@ -156,6 +157,11 @@ public class Player : MonoBehaviour
             isOnGround = true;
             
         }
+
+        if (collision.gameObject.tag == "Death")
+        {
+            RespawnAllPlayer();
+        }
     }
     public void TakeDamage(int damage)
     {
@@ -163,9 +169,10 @@ public class Player : MonoBehaviour
         if (health <= 0)
         {       
             //gameOverScreen.Setup();
-            RespawnAllPlayer();
+            RespawnAllPlayer(); // death
         }
     }
+   
 
     private void RespawnAllPlayer() // Make All player go same checkpoint
     {

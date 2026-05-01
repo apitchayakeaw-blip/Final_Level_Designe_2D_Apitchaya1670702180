@@ -7,6 +7,7 @@ TagManager:
   - Ground
   - Mashroom
   - Enemy
+  - Death
   layers:
   - Default
   - TransparentFX
@@ -49,6 +50,21 @@ TagManager:
     locked: 0
   - name: Collision
     uniqueID: 3038189837
+    locked: 0
+  - name: Bg
+    uniqueID: 2173350023
+    locked: 0
+  - name: Bg Mid
+    uniqueID: 1460028423
+    locked: 0
+  - name: Bg top
+    uniqueID: 4063632091
+    locked: 0
+  - name: Game
+    uniqueID: 3741554547
+    locked: 0
+  - name: Top
+    uniqueID: 1350974381
     locked: 0
   m_RenderingLayers:
   - Default
