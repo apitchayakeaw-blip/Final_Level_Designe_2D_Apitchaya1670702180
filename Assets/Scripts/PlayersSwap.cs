@@ -9,12 +9,15 @@ public class PlayersSwap : MonoBehaviour
     public Camera camera1;
     public Camera camera2;
 
+    public GameObject HP;
+
     // Update is called once per frame
 
     private void Start()
     {
         camera1.gameObject.SetActive(true);
         camera2.gameObject.SetActive(false);
+        HP.SetActive(false);
     }
     void Update()
     {
@@ -23,6 +26,7 @@ public class PlayersSwap : MonoBehaviour
             SwitchPlayer();
             camera1.gameObject.SetActive(!camera1.gameObject.activeSelf);
             camera2.gameObject.SetActive(!camera1.gameObject.activeSelf);
+            HP.SetActive(!HP.gameObject.activeSelf);
         }
     }
 

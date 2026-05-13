@@ -196,8 +196,8 @@ GameObject:
   - component: {fileID: 8169932156637987959}
   - component: {fileID: 1404575429844484234}
   - component: {fileID: 2194417904576892336}
-  - component: {fileID: 5215833018289577704}
   - component: {fileID: 7581705290414906833}
+  - component: {fileID: 5604527494957478288}
   m_Layer: 7
   m_Name: Marun_Sister
   m_TagString: Player
@@ -302,6 +302,7 @@ MonoBehaviour:
   health: 0
   Speed: 8
   JumpForce: 22
+  DebugColider: 0
   gameOverScreen: {fileID: 0}
   Malee: {fileID: 2582693299978238734}
 --- !u!95 &2194417904576892336
@@ -326,8 +327,35 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!60 &5215833018289577704
-PolygonCollider2D:
+--- !u!50 &7581705290414906833
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8752492874687874364}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
+--- !u!70 &5604527494957478288
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -360,65 +388,6 @@ PolygonCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0}
-    oldSize: {x: 1.125, y: 1.828125}
-    newSize: {x: 1.125, y: 1.84375}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.5625, y: 0.875}
-      - {x: 0.5625, y: 1.59375}
-      - {x: 0.234375, y: 1.65625}
-      - {x: 0.125, y: 1.828125}
-      - {x: -0.171875, y: 1.828125}
-      - {x: -0.28125, y: 1.65625}
-      - {x: -0.296875, y: 1.40625}
-      - {x: -0.296875, y: 0.8125}
-      - {x: -0.3125, y: 0.234375}
-      - {x: -0.515625, y: 0.078125}
-      - {x: -0.5625, y: 0.03125}
-      - {x: -0.5652957, y: 0.0091988705}
-      - {x: 0.38730076, y: 0.008857932}
-      - {x: 0.296875, y: 0.46875}
-      - {x: 0.265625, y: 0.75}
-      - {x: 0.5, y: 0.734375}
-    - - {x: 0.328125, y: 1.1875}
-      - {x: 0.359375, y: 1.21875}
-      - {x: 0.34375, y: 1.203125}
-      - {x: 0.34375, y: 1.1875}
-      - {x: 0.296875, y: 1.125}
-      - {x: 0.328125, y: 1.140625}
-  m_UseDelaunayMesh: 1
---- !u!50 &7581705290414906833
-Rigidbody2D:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8752492874687874364}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Offset: {x: -0.0068882536, y: 0.91406214}
+  m_Size: {x: 0.50503325, y: 1.8281243}
+  m_Direction: 0

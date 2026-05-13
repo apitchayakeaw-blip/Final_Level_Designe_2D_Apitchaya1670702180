@@ -7,6 +7,11 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadScene("INGame");
     }
+
+    public void QuiteGame()
+    {
+       Application.Quit();
+    }
 }
 
 
