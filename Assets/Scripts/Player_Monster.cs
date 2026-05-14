@@ -16,6 +16,8 @@ public class Player_Monster : Player
         rb.gravityScale = gravityMultiplier;
         maxHealth = 5;
         health = maxHealth;
+
+        Malee.SetActive(false);
     }
 
     protected override void FixedUpdate()

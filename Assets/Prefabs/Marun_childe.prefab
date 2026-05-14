@@ -33,7 +33,8 @@ Transform:
   m_LocalPosition: {x: 133.95, y: 6.97, z: 0}
   m_LocalScale: {x: 2.5, y: 2.5, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1197370759442339356}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &496478721059269218
@@ -109,6 +110,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Player
   rb: {fileID: 8059751132955397968}
   gravityMultiplier: 3.5
+  groundCheck: {fileID: 1197370759442339356}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 8
   animator: {fileID: 3092487254911505284}
   cam: {fileID: 0}
   offset: {x: 2, y: 3, z: -10}
@@ -117,6 +122,7 @@ MonoBehaviour:
   health: 0
   Speed: 10
   JumpForce: 15
+  isOnGround: 0
   DebugColider: 0
   gameOverScreen: {fileID: 0}
 --- !u!50 &8059751132955397968
@@ -135,7 +141,7 @@ Rigidbody2D:
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: eee80c2bd95482149aee2be7fd88d70d, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -205,3 +211,34 @@ CapsuleCollider2D:
   m_Offset: {x: 0.047015406, y: 0.5759619}
   m_Size: {x: 0.43405768, y: 1.1605762}
   m_Direction: 0
+--- !u!1 &4851430351661688964
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1197370759442339356}
+  m_Layer: 0
+  m_Name: GroundCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: -1412012063857583412, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1197370759442339356
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4851430351661688964}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.063, y: 0.026, z: 0}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8396867102757418273}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

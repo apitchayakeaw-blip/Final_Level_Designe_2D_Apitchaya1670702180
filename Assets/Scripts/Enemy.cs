@@ -8,6 +8,8 @@ public class Enemy : MonoBehaviour
 
     Animator animator;
 
+    public SpriteRenderer spriteRenderer;   
+
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -34,13 +36,20 @@ public class Enemy : MonoBehaviour
     public void TakeDamage(int damage)
     {
 
-
+        StartCoroutine(FlashRed());
         health -= damage;
         
         if (health <= 0)
         {
             Destroy(gameObject);
         }
+    }
+
+    public IEnumerator FlashRed()
+    {
+        spriteRenderer.color = Color.red;
+        yield return new WaitForSeconds(0.3f);
+        spriteRenderer.color = Color.white;
     }
 
 

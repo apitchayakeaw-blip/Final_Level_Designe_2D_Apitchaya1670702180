@@ -480,7 +480,7 @@ GameObject:
   - component: {fileID: 2070479825499945621}
   - component: {fileID: 7809218672917030350}
   - component: {fileID: 5691334489567668232}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Square
   m_TagString: Ground
   m_Icon: {fileID: 0}

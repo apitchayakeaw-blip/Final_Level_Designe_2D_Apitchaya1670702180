@@ -130,8 +130,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyA
   damage: 1
   health: 5
-  sprite: {fileID: 0}
-  originalColor: {r: 0, g: 0, b: 0, a: 0}
+  spriteRenderer: {fileID: 1901626713431297155}
   pointA: {fileID: 1544170753091691934}
   pointB: {fileID: 4497455586376450368}
   movespeed: 3

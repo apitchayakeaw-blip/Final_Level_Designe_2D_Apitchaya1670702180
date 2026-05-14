@@ -8,6 +8,10 @@ public class Player : MonoBehaviour
     public Rigidbody2D rb;
     public float gravityMultiplier;
 
+    [SerializeField] Transform groundCheck;
+    const float groundCheckRadius = 0.2f;
+    [SerializeField] LayerMask groundLayer;
+
     bool facingRight = true;
 
     public Animator animator;
@@ -26,7 +30,7 @@ public class Player : MonoBehaviour
 
     private InputAction jumpAction;
     public float JumpForce = 0.5f;
-    bool isOnGround;
+    [SerializeField] bool isOnGround;
 
     public bool DebugColider;
 
@@ -108,6 +112,9 @@ public class Player : MonoBehaviour
     protected virtual void Update()
     {
 
+        GrondCheck();
+
+
         var moveAction = InputSystem.actions.FindAction("Move");
         input = moveAction.ReadValue<Vector2>();
         
@@ -155,7 +162,16 @@ public class Player : MonoBehaviour
         transform.localScale = theScale;
     }
 
-
+    void GrondCheck()
+    {
+        isOnGround = false ;
+        
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(groundCheck.position, groundCheckRadius , groundLayer);
+        if (colliders.Length > 0)
+        {
+            isOnGround = true;
+        }
+    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -165,11 +181,11 @@ public class Player : MonoBehaviour
             Debug.Log(collision.gameObject.name);
         }
         
-        if (collision.gameObject.CompareTag("Ground"))
+        /*if (collision.gameObject.CompareTag("Ground"))
         {
             isOnGround = true;
             
-        }
+        }*/
 
         if (collision.gameObject.tag == "Death")
         {
